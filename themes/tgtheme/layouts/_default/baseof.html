@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="charset" content="utf-8">
+    <title>{{ block "title" .}}
+      {{ .Site.Title }} &ndash; {{ .Title }}
+    {{ end }}</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/logo.gif">
+</head>
+<body>
+{{ block "main" .}}
+  Kein Inhalt.
+{{ end }}
+{{ block "footer" . }}
+{{ end }}
+</body>
+</html>
