@@ -1,7 +1,8 @@
 
 /* theme */
 $header-bg: $lightgray !default;
-$header-nav-link: $darkgray !default;
+$header-nav-link: $darkgray;
+$header-nav-link-hover: $darkgray !default;
 /* end theme */
 
 .header {
@@ -36,12 +37,11 @@ $header-nav-link: $darkgray !default;
     padding: 1lh 0.75rem;
     display: inline-block;
 
+    &:hover,
+    &:focus {
+      color: $lightgray;
+      background-color: $darkgray;
+    }
   }
-
-  li:last-child a {
-    padding-right: inherit;
-  }
-
-
 }
 

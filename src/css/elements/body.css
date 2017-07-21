@@ -1,9 +1,9 @@
 
-/* theme */
-/* end theme */
-
 :root {
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-family: $body-font;
+  background-color: $white;
+  color: $darkgray;
 }
+
