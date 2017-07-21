@@ -1,0 +1,10 @@
+
+.dual-headline__second {
+  @mixin ts 3;
+}
+
+.dual-headline__first {
+  color: $orange;
+  @mixin ts 2;
+}
+

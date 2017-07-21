@@ -9,6 +9,6 @@ a {
 }
 
 a:visited {
-  color: color($linkcolor red(+10%));
+  color: color($linkcolor red(-20%));
 }
 

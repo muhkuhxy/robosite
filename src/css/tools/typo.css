@@ -1,0 +1,17 @@
+
+$body-font: Roboto, Helvetica, sans-serif !default;
+$headline-font: 'Roboto Condensed', Helvetica, sans-serif !default;
+
+$base-font-size: 1rem;
+$base-line-height: 1.5;
+
+@define-mixin ts $level {
+  @if $level == 2 {
+    font-size: 1.75rem;
+    line-height: 1.5lh;
+  }
+  @else {
+    font-size: 2.75rem;
+    line-height: 2lh;
+  }
+}

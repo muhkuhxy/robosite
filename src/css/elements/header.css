@@ -19,7 +19,7 @@ $header-nav-link: $darkgray !default;
 
 .header__nav {
   text-align: right;
-  font-size: 1.1111vr;
+  font-size: 1.25rem;
 
   ul {
     margin: 0;
@@ -33,13 +33,15 @@ $header-nav-link: $darkgray !default;
 
   li a {
     color: $header-nav-link;
-    padding: 1lh 1rem;
+    padding: 1lh 0.75rem;
     display: inline-block;
 
-    &:last-child {
-      padding-right: 0;
-    }
   }
+
+  li:last-child a {
+    padding-right: inherit;
+  }
+
 
 }
 

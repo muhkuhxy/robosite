@@ -1,10 +1,10 @@
 
 @import 'settings/*.css';
-/* @import 'tools/*.css'; */
+@import 'tools/*.css';
 @import 'generic/*.css';
 @import 'elements/*.css';
-/* @import 'objects/*.css'; */
-/*@import 'components/*.css';*/
+@import 'objects/*.css';
+@import 'components/*.css';
 /* @import 'trumps/*.css'; */
 
 footer li {
