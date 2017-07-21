@@ -63,3 +63,5 @@ package-lock.json
 
 # hugo
 /public
+.*.sw[poq]
+/static/css
