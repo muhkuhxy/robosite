@@ -10,7 +10,7 @@ $icon-highlight: $orange;
   }
 
   &__icon {
-    $h: 1.75lh;
+    $h: 1.5lh;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -18,7 +18,7 @@ $icon-highlight: $orange;
     width: $h;
     height: $h;
     line-height: $h;
-    border-radius: calc($h/2);
+    border-radius: 50%;
     border-top-left-radius: 5px;
     background-color: $icon-highlight;
     color: $white;
@@ -27,8 +27,13 @@ $icon-highlight: $orange;
     margin-right: 0.5em;
 
     &--mail {
-      border-top-left-radius: calc($h/2);
+      border-top-left-radius: 50%;
       border-top-right-radius: 5px;
+      & .fa {
+        position: relative;
+        top: -2px;
+        /* left: 1px; */
+      }
     }
   }
 
