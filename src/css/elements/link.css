@@ -1,0 +1,12 @@
+
+$linkcolor: $highlight;
+
+a {
+  color: $linkcolor;
+  text-decoration: none;
+}
+
+a:visited {
+  color: color($linkcolor red(+10%));
+}
+

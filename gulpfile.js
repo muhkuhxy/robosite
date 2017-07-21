@@ -9,6 +9,7 @@ gulp.task('css', function() {
     .pipe(sourcemaps.init())
     .pipe(postcss([
       require('stylelint'),
+      require('postcss-color-function')(),
       require('precss'),
       require('autoprefixer'),
       require('cssnano')

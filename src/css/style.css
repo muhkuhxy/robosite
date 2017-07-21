@@ -1,21 +1,11 @@
-html {
-  background-color: #f0f0f0;
-  color: #222831;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-  color: #0092ca;
-}
-
-body {
-
-}
+@import 'settings/*.css';
+/* @import 'tools/*.css'; */
+@import 'generic/*.css';
+@import 'elements/*.css';
+/* @import 'objects/*.css'; */
+/*@import 'components/*.css';*/
+/* @import 'trumps/*.css'; */
 
 header {
   background-color: #393e46;
@@ -25,16 +15,6 @@ header {
 header .logo {
   width: 6rem;
   margin-left: 2rem;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: block;
-}
-
-.clearfix:after {
-  clear: both;
 }
 
 nav {
