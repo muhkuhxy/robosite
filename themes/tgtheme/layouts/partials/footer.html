@@ -1,5 +1,20 @@
 <footer class="footer">
-  <div class="footer__logo-container">
-    <img class="footer__logo" src="/images/logo.png" alt="TG Tronik Logo">
+  <a class="footer__logo-container" href="/">
+    <img class="footer__logo" src="/images/logo.png" alt="{{ .Site.Title }} Logo">
+  </a>
+  <div class="contact footer--contact">
+      <h2 class="contact__headline">Kontaktieren Sie uns</h2>
+      <div class="contact__info">
+        <i class="contact__icon">Tel</i>
+        <span>0241 12345 5678</span>
+      </div>
+      <div class="contact__info">
+        <i class="contact__icon contact__icon--mail">Mail</i>
+        <a href="mailto:info@tgtronik.de">info@tgtronik.de</a></span>
+      </div>
+      <div class="contact__form">Oder über das <a href="/kontakt">Kontaktformular</a></div>
+  </div>
+  <div class="footer__legal">
+    &copy; {{ .Page.Now.Year }} {{ .Site.Title }} | <a href="/impressum">Impressum</a>
   </div>
 </footer>

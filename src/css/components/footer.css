@@ -1,20 +1,32 @@
 
 /* theme */
 $footer-bg: $darkgray !default;
+$footer-color: $lightgray !default;
 /* end theme */
 
 .footer {
   background-color: $footer-bg;
   padding: 1lh 5rem;
+  color: $footer-color;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 
   &__logo-container {
     box-shadow: 3px 3px 11px 0px rgba(0, 0, 0, .5);
-    display: inline-block;
-    line-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
   }
 
   &__logo {
     width: 80px;
   }
+
+  &__legal {
+    align-self: flex-end;
+  }
+
 }
 

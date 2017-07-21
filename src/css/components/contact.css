@@ -1,0 +1,45 @@
+
+/* theme */
+$icon-highlight: $orange;
+/* end theme */
+
+.contact {
+
+  &__headline {
+    padding: 0;
+  }
+
+  &__icon {
+    $h: 1.75lh;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid $icon-highlight;
+    width: $h;
+    height: $h;
+    line-height: $h;
+    border-radius: calc($h/2);
+    border-top-left-radius: 5px;
+    background-color: $icon-highlight;
+    color: $white;
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 0.5em;
+
+    &--mail {
+      border-top-left-radius: calc($h/2);
+      border-top-right-radius: 5px;
+    }
+  }
+
+  &__centralizer {
+    margin: auto;
+  }
+
+  &__info {
+    margin: 0.3lh 0;
+    a {
+      color: inherit;
+    }
+  }
+}
