@@ -1,5 +1,7 @@
 
-$linkcolor: $highlight;
+/* theme */
+$linkcolor: $orange;
+/* end theme */
 
 a {
   color: $linkcolor;

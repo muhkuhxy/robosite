@@ -11,6 +11,7 @@ gulp.task('css', function() {
       require('stylelint'),
       require('postcss-color-function')(),
       require('precss'),
+      require('postcss-lh'),
       require('autoprefixer'),
       require('cssnano')
     ]))

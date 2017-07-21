@@ -1,8 +1,19 @@
 
+/* palette */
+$lightgray: #d8d8d8;
+$brightblue: #0062f3;
+$bluevariant: #458cff;
+$darkgray: #404040;
+$lightblue: #e8f1f5;
+$white: #fafafa;
+$orange: #fb8360;
+
+/*
 $dark: #222831;
 $medium: #393e46;
 $highlight: #0092ca;
 $light: #eee;
 
-$background: $f0f0f0;
+$background: $fafafa;
+*/
 

@@ -7,42 +7,6 @@
 /*@import 'components/*.css';*/
 /* @import 'trumps/*.css'; */
 
-header {
-  background-color: #393e46;
-  padding: 0.5rem;
-}
-
-header .logo {
-  width: 6rem;
-  margin-left: 2rem;
-}
-
-nav {
-  float: right;
-  font-size: 20px;
-  margin-right: 2rem;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  list-style-type: none;
-  display: inline-block;
-}
-
-nav li + li {
-  margin-left: 1rem;
-}
-
-nav li a {
-  background-color: #0092ca;
-  color: #393e46;
-  padding: 0.2rem 1rem;
-}
-
 footer li {
   list-style-type: none;
   display: inline-block;
