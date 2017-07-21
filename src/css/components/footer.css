@@ -1,0 +1,20 @@
+
+/* theme */
+$footer-bg: $darkgray !default;
+/* end theme */
+
+.footer {
+  background-color: $footer-bg;
+  padding: 1lh 5rem;
+
+  &__logo-container {
+    box-shadow: 3px 3px 11px 0px rgba(0, 0, 0, .5);
+    display: inline-block;
+    line-height: 0;
+  }
+
+  &__logo {
+    width: 80px;
+  }
+}
+
