@@ -1,11 +1,17 @@
 
-@define-mixin button fg bg {
-  color: $fg;
-  background-color: $bg;
+@define-mixin button $fg {
+  border: 2px solid $fg;
+  background-color: transparent;
+  color: $button-color;
+  padding: 0;
+  line-height: 1.5lh;
+  line-height: calc(1.5lh - 4px);
 
   &:hover, &:focus {
-    color: $bg;
-    background-color: $bg;
+    color: $white;
+    background-color: $fg;
+    cursor: pointer;
+    /* border: 1px solid color($button-color lightness(-2%)); */
   }
 
 }

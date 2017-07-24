@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<section class="body-text">
+  <h1 class="dual-headline">
+    <div class="dual-headline__first">Schreiben Sie uns</div>
+    <div class="dual-headline__second">Kontaktformular</div>
+  </h1>
+  <p class="body-text__paragraph">Bitte denken Sie daran, uns mit zu teilen, wie wir Sie erreichen können. Wir werden uns so bald wie möglich bei Ihnen melden.</p>
+</section>
+
+<section class="body-text body-text--close">
+  <div class="contactform">
+    <div>
+      <label for="name">Ihr Name</label>
+    </div>
+    <div>
+      <input class="contactform__name" id="name" type="text" placeholder="Max Mustermann">
+    </div>
+    <div>
+      <label for="msg">Ihre Nachricht</label>
+    </div>
+    <div>
+      <textarea class="contactform__msg" id="msg" name="msg"></textarea>
+    </div>
+  </div>
+</section>
+
+{{ end }}

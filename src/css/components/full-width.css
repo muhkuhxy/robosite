@@ -64,6 +64,12 @@ $hero-headline: $orange;
 
   &__spacer {
     flex: 1 0 auto;
+    min-height: 1lh;
+  }
+
+  &__button {
+    @mixin button $button-color;
+    text-align: center;
   }
 
 }

@@ -1,0 +1,16 @@
+
+.contactform {
+  input[type=text] {
+    border: none;
+    border-bottom: 1px solid $darkgray;
+    width: 75%;
+    background-color: $white;
+
+  }
+
+  textarea {
+    width: 75%;
+    min-height: 5lh;
+    background-color: $white;
+  }
+}

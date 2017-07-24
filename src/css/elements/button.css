@@ -2,20 +2,6 @@
 $button-color: $orange;
 
 button {
-  font-family: $body-font;
-  border: 2px solid $button-color;
-  background-color: transparent;
-  color: $button-color;
-  padding: 0;
-  line-height: 1.5lh;
-  line-height: calc(1.5lh - 4px);
-
-  &:hover, &:focus {
-    color: $white;
-    background-color: $button-color;
-    cursor: pointer;
-    /* border: 1px solid color($button-color lightness(-2%)); */
-  }
-
+  @mixin button $button-color;
 }
 

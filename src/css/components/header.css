@@ -3,12 +3,17 @@
 $header-bg: $lightgray !default;
 $header-nav-link: $darkgray;
 $header-nav-link-hover: $darkgray !default;
+$header-image-border: color($lightgray blackness(+9%));
 /* end theme */
 
 .header {
-  background-color: $header-bg;
-  position: relative;
-  padding: 0 5rem;
+  width: 100%;
+
+  &__navbar {
+    background-color: $header-bg;
+    position: relative;
+    padding: 0 5rem;
+  }
 
   &__logo {
     position: absolute;
@@ -45,5 +50,47 @@ $header-nav-link-hover: $darkgray !default;
       }
     }
   }
+
+  &__image-parent {
+    position: relative;
+    border-top: 1px solid $header-image-border;
+    border-bottom: 1px solid $header-image-border;
+  }
+
+  &__image {
+    @mixin respimg;
+    background-image: url('/images/orangerroboarm.jpg');
+    background-position: 50% 13%;
+    background-size: cover;
+    /* background-attachment: fixed; */
+
+    &--unternehmen {
+      background-image: url('/images/roboarm.jpg');
+      background-position: 50% 20%;
+    }
+
+  }
+
+  &__image-helper {
+    @mixin inner-respimg 60vh;
+
+    &--small {
+      padding-top: 30vh;
+    }
+  }
+
+  &__tagline {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: color(white a(70%));
+    border: 1px solid $header-border;
+    padding: .25lh .5lh;
+
+    .dual-headline {
+      padding: 0;
+    }
+  }
+
 }
 

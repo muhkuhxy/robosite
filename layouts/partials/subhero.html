@@ -5,5 +5,5 @@
   </span>
   <div class="one-third__text">{{ .hero.text }}</div>
   <div class="one-third__spacer"></div>
-  <button class="one-third__button">{{ printf .hero.button .context.Site.Title }}</button>
+  <a href="{{ .hero.link }}" class="one-third__button">{{ printf .hero.button .context.Site.Title }}</a>
 </div>

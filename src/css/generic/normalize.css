@@ -1,3 +1,7 @@
 
 @import '../../../node_modules/normalize.css/*.css';
 
+button, input, select, textarea {
+  font-family: $body-font;
+}
+
