@@ -1,0 +1,37 @@
+{
+  "name": "robosite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhkuhxy/robosite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhkuhxy/robosite/issues"
+  },
+  "homepage": "https://github.com/muhkuhxy/robosite#readme",
+  "stylelint": {
+    "extends": "stylelint-config-recommended"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "normalize.css": "^7.0.0",
+    "postcss-color-function": "^4.0.0",
+    "postcss-lh": "^1.1.4",
+    "precss": "^2.0.0",
+    "stylelint": "^8.0.0",
+    "stylelint-config-recommended": "^1.0.0"
+  }
+}

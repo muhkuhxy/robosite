@@ -58,7 +58,6 @@ typings/
 .env
 
 # npm
-package.json
 package-lock.json
 
 # hugo
