@@ -1,0 +1,9 @@
+<div class="one-third">
+  <a href="{{ .hero.link }}"><h2 class="one-third__headline">{{ .hero.headline }}</h2></a>
+  <span class="one-third__image one-third__image--{{ .hero.image }}" role="presentation">
+    <a href="{{ .hero.link }}" class="one-third__image-helper"></a>
+  </span>
+  <div class="one-third__text">{{ .hero.text }}</div>
+  <div class="one-third__spacer"></div>
+  <button class="one-third__button">{{ printf .hero.button .context.Site.Title }}</button>
+</div>

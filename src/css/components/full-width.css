@@ -23,12 +23,13 @@ $hero-headline: $orange;
   margin: 0 2.5%;
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
+  align-items: stretch;
 
   &__headline {
     color: $hero-headline;
     @mixin ts 2;
     padding: 0 0 1lh;
+    text-align: center;
   }
 
   &__image {
