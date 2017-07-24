@@ -6,6 +6,7 @@ $footer-color: $lightgray !default;
 
 .footer {
   background-color: $footer-bg;
+  margin-top: 1lh;
   padding: 1lh 5rem;
   color: $footer-color;
   display: flex;

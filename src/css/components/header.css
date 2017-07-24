@@ -37,7 +37,8 @@ $header-nav-link-hover: $darkgray !default;
       display: inline-block;
 
       &:hover,
-      &:focus {
+      &:focus,
+      &.active {
         color: $lightgray;
         background-color: $darkgray;
       }

@@ -9,8 +9,11 @@
     <link rel="icon" href="/images/logo.gif">
 </head>
 <body>
+{{ partial "header" . }}
+
 {{ block "main" . }}
 {{ end }}
+
 {{ partial "footer" . }}
 </body>
 </html>

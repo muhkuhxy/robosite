@@ -1,0 +1,12 @@
+
+@define-mixin button fg bg {
+  color: $fg;
+  background-color: $bg;
+
+  &:hover, &:focus {
+    color: $bg;
+    background-color: $bg;
+  }
+
+}
+
