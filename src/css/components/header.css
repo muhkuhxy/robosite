@@ -75,7 +75,7 @@ $header-image-border: color($lightgray blackness(+9%));
     @mixin inner-respimg 60vh;
 
     &--small {
-      padding-top: 30vh;
+      padding-top: 25vh;
     }
   }
 

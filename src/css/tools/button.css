@@ -3,7 +3,7 @@
   border: 2px solid $fg;
   background-color: transparent;
   color: $button-color;
-  padding: 0;
+  padding: 0 1rem;
   line-height: 1.5lh;
   line-height: calc(1.5lh - 4px);
 

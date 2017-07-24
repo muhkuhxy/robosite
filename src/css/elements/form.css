@@ -1,0 +1,8 @@
+
+input[type=text], textarea {
+  border: 1px solid $lightgray;
+  width: 100%;
+  background-color: $white;
+  padding: .5lh .5rem;
+  margin: .5lh 0;
+}

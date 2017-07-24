@@ -5,24 +5,21 @@
     <div class="dual-headline__first">Schreiben Sie uns</div>
     <div class="dual-headline__second">Kontaktformular</div>
   </h1>
-  <p class="body-text__paragraph">Bitte denken Sie daran, uns mit zu teilen, wie wir Sie erreichen können. Wir werden uns so bald wie möglich bei Ihnen melden.</p>
+  <p class="body-text__paragraph">Bitte denken Sie daran, uns mitzuteilen, wie wir Sie erreichen können. Wir werden uns so bald wie möglich bei Ihnen melden.</p>
 </section>
 
 <section class="body-text body-text--close">
-  <div class="contactform">
+  <form class="contactform" method="post" action="#">
+    <label for="name">Ihr Name</label>
     <div>
-      <label for="name">Ihr Name</label>
+      <input class="contactform__name" id="name" name="name" type="text">
     </div>
-    <div>
-      <input class="contactform__name" id="name" type="text" placeholder="Max Mustermann">
-    </div>
-    <div>
-      <label for="msg">Ihre Nachricht</label>
-    </div>
+    <label for="msg">Ihre Nachricht</label>
     <div>
       <textarea class="contactform__msg" id="msg" name="msg"></textarea>
     </div>
-  </div>
+    <button type="submit" class="contactform__button">Abschicken</button>
+  </form>
 </section>
 
 {{ end }}
