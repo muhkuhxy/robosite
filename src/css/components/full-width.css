@@ -1,17 +1,8 @@
 
+/* theme */
 $stripe-color: $darkgray;
-
-@define-mixin respimg {
-  width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  font: 0/0 serif;
-  text-shadow: none;
-  color: transparent;
-  background-size: 100%;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
+$hero-headline: $orange;
+/* end theme */
 
 .full-width {
   display: flex;
@@ -35,7 +26,7 @@ $stripe-color: $darkgray;
   align-items: flex-start;
 
   &__headline {
-    color: $orange;
+    color: $hero-headline;
     @mixin ts 2;
     padding: 0 0 1lh;
   }
@@ -44,22 +35,26 @@ $stripe-color: $darkgray;
     @mixin respimg;
 
     &--tari {
-      background: no-repeat url('/images/tari.png') top/100% auto;
+      background-image: url('/images/tari.png');
+      background-position: top;
+      background-size: 100% auto;
     }
 
     &--roboarm {
-      background: url('/images/roboarm.jpg') -50px/auto 140%;
+      background-image: url('/images/roboarm.jpg');
+      background-position: -50px;
+      background-size: auto 140%;
     }
 
     &--robozelle {
-      background: url('/images/robozelle.jpg') 33% 10%/105%;
+      background-image: url('/images/robozelle.jpg');
+      background-position: 33% 10%;
+      background-size: 105%;
     }
   }
 
   &__image-helper {
-    padding-top: 88%; /* height/width of image */
-    display: block;
-    height: 0;
+    @mixin inner-respimg 88%;
   }
 
   &__text {
@@ -70,7 +65,4 @@ $stripe-color: $darkgray;
     flex: 1 0 auto;
   }
 
-  &__button {
-    /* align-self: flex-end; */
-  }
 }

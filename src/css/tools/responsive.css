@@ -1,0 +1,18 @@
+
+@define-mixin respimg {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@define-mixin inner-respimg $ratio {
+    padding-top: $ratio; /* height/width of image */
+    display: block;
+    height: 0;
+}

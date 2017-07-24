@@ -2,10 +2,10 @@
   <a href="/"><img class="header__logo" src="/images/logo.png" alt="TG Tronik Logo"></a>
   <nav class="header__nav">
     <ul>
-      <li><a href="/">Start</a></li>
-      <li><a href="/kompetenzen">Kompetenzen</a></li>
-      <li><a href="/unternehmen">Unternehmen</a></li>
-      <li><a href="/kontakt">Kontakt</a></li>
+      <li><a class="{{ if .IsHome }}active{{ end }}" href="/">Start</a></li>
+      <li><a class="{{ if eq .Type "kompetenzen" }}active{{ end }}" href="/kompetenzen">Kompetenzen</a></li>
+      <li><a class="{{ if eq .Type "unternehmen" }}active{{ end }}" href="/unternehmen">Unternehmen</a></li>
+      <li><a class="{{ if eq .Type "kontakt" }}active{{ end }}" href="/kontakt">Kontakt</a></li>
     </ul>
   </nav>
 </header>
