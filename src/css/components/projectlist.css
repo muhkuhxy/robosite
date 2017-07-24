@@ -1,0 +1,8 @@
+
+$bullets: $orange;
+
+.competencies {
+  li i {
+    color: $bullets;
+  }
+}

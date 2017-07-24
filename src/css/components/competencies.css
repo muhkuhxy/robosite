@@ -1,0 +1,8 @@
+
+$bullets: $orange;
+
+.projectlist {
+  li i {
+    color: $bullets;
+  }
+}

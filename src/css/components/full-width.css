@@ -1,6 +1,7 @@
 
 /* theme */
-$stripe-color: $darkgray;
+$stripe-bg-color: $darkgray;
+$stripe-color: $white;
 $hero-headline: $orange;
 /* end theme */
 
@@ -12,8 +13,8 @@ $hero-headline: $orange;
   margin-top: 1lh;
 
   &--stripe {
-    background-color: $stripe-color;
-    color: $white;
+    background-color: $stripe-bg-color;
+    color: $stripe-color;
   }
 
 }
