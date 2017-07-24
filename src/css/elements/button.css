@@ -6,7 +6,9 @@ button {
   border: 2px solid $button-color;
   background-color: transparent;
   color: $button-color;
-  padding: 0.25lh 1rem;
+  padding: 0;
+  line-height: 1.5lh;
+  line-height: calc(1.5lh - 4px);
 
   &:hover, &:focus {
     color: $white;
