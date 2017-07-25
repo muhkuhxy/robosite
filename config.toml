@@ -1,4 +1,4 @@
-baseURL = "https://muhkuhxy.github.io/"
+baseURL = "https://muhkuhxy.github.io/robosite"
 languageCode = "de-de"
 publishDir = "docs"
 title = "TG Tronik"

@@ -64,3 +64,4 @@ package-lock.json
 /public
 .*.sw[poq]
 /static/css
+.DS_Store

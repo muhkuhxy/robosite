@@ -1,18 +1,18 @@
 <header class="header clearfix">
   <div class="header__navbar">
-     <a href="/"><img class="header__logo" src="/images/logo.png" alt="TG Tronik Logo"></a>
-     <nav class="header__nav">
-       <ul>
-         <li><a class="{{ if .IsHome }}active{{ end }}" href="/">Start</a></li>
-         <li><a class="{{ if eq .Type "kompetenzen" }}active{{ end }}" href="/kompetenzen">Kompetenzen</a></li>
-         <li><a class="{{ if eq .Type "unternehmen" }}active{{ end }}" href="/unternehmen">Unternehmen</a></li>
-         <li><a class="{{ if eq .Type "kontakt" }}active{{ end }}" href="/kontakt">Kontakt</a></li>
-       </ul>
-     </nav>
+    <a href="{{ "/" | relURL }}"><img class="header__logo" src="{{ "/images/logo.png" | relURL }}" alt="TG Tronik Logo"></a>
+    <nav class="header__nav">
+      <ul>
+        <li><a class="{{ if .IsHome }}active{{ end }}" href="{{ "/" | relURL }}">Start</a></li>
+        <li><a class="{{ if eq .Type "kompetenzen" }}active{{ end }}" href="{{ "/kompetenzen" | relURL }}">Kompetenzen</a></li>
+        <li><a class="{{ if eq .Type "unternehmen" }}active{{ end }}" href="{{ "/unternehmen" | relURL }}">Unternehmen</a></li>
+        <li><a class="{{ if eq .Type "kontakt" }}active{{ end }}" href="{{ "/kontakt" | relURL }}">Kontakt</a></li>
+      </ul>
+    </nav>
   </div>
   <div class="header__image-parent">
     <span class="header__image {{ if not .IsHome }}header__image--{{ .Type }}{{ end }}" role="presentation">
-        <span class="header__image-helper {{ if not .IsHome }}header__image-helper--small{{ end }}"></span>
+      <span class="header__image-helper {{ if not .IsHome }}header__image-helper--small{{ end }}"></span>
     </span>
     {{ if .IsHome }}
     <div class="header__tagline">

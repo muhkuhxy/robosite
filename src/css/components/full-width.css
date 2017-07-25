@@ -37,19 +37,19 @@ $hero-headline: $orange;
     @mixin respimg;
 
     &--tari {
-      background-image: url('/images/tari.png');
+      background-image: url('../images/tari.png');
       background-position: top;
       background-size: 100% auto;
     }
 
     &--roboarm {
-      background-image: url('/images/roboarm.jpg');
+      background-image: url('../images/roboarm.jpg');
       background-position: -50px;
       background-size: auto 140%;
     }
 
     &--robozelle {
-      background-image: url('/images/robozelle.jpg');
+      background-image: url('../images/robozelle.jpg');
       background-position: 33% 10%;
       background-size: 105%;
     }

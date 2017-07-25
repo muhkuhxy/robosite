@@ -1,6 +1,6 @@
 <footer class="footer">
-  <a class="footer__logo-container" href="/">
-    <img class="footer__logo" src="/images/logo.png" alt="{{ .Site.Title }} Logo">
+  <a class="footer__logo-container" href="{{ "/" | relURL }}">
+    <img class="footer__logo" src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }} Logo">
   </a>
   <div class="contact footer--contact">
       <h2 class="contact__headline">Kontaktieren Sie uns</h2>
@@ -16,11 +16,11 @@
         </span>
         <a class="obfuscated" href="mailto:{{ .Site.Params.mail | base64Encode }}">{{ .Site.Params.mail | base64Encode }}</a></span>
       </div>
-      <div class="contact__form">Oder über das <a href="/kontakt">Kontaktformular</a></div>
+      <div class="contact__form">Oder über das <a href="{{ "/kontakt" | relURL }}">Kontaktformular</a></div>
   </div>
   <div class="footer__legal">
-    <div><a href="/impressum">Impressum</a></div>
-    <div><a href="/impressum#datenschutz">Datenschutz</a></div>
+    <div><a href="{{ "/impressum" | relURL }}">Impressum</a></div>
+    <div><a href="{{ "/impressum#datenschutz" | relURL }}">Datenschutz</a></div>
     <div>&copy; {{ now.Year }} {{ .Site.Title }}</div>
   </div>
 </footer>

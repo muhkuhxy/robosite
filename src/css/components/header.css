@@ -59,13 +59,13 @@ $header-image-border: color($lightgray blackness(+9%));
 
   &__image {
     @mixin respimg;
-    background-image: url('/images/orangerroboarm.jpg');
+    background-image: url('../images/orangerroboarm.jpg');
     background-position: 50% 13%;
     background-size: cover;
     /* background-attachment: fixed; */
 
     &--unternehmen {
-      background-image: url('/images/roboarm.jpg');
+      background-image: url('../images/roboarm.jpg');
       background-position: 50% 20%;
     }
 

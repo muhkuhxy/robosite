@@ -4,9 +4,9 @@
     <meta name="charset" content="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Site.Title }} &ndash; {{ .Title }}</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="icon" href="/images/logo.gif">
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | relURL }}">
+    <link rel="icon" href="{{ "/images/logo.gif" | relURL }}">
 </head>
 <body>
 {{ partial "header" . }}
