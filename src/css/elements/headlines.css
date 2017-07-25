@@ -13,12 +13,20 @@ h3 {
 
 h1 {
   @mixin ts 3;
-  padding: 2.5lh 0 0.5lh 0;
+  padding: 3lh 0 1lh 0;
 }
 
 h2 {
   @mixin ts 2;
-  padding: 1.5lh 0 0.5lh 0;
+  padding: 2lh 0 0.5lh 0;
   color: $headline-highlight;
+}
+
+h1 + h2 {
+  padding-top: 0;
+}
+
+h2 + h3 {
+  padding-top: 0;
 }
 
