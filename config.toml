@@ -2,6 +2,7 @@ baseURL = "https://muhkuhxy.github.io/robosite"
 languageCode = "de-de"
 publishDir = "docs"
 title = "TG Tronik"
+theme = "tgtheme"
 
 [params]
   mail = "info@tgtronik.de"

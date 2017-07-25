@@ -65,3 +65,4 @@ package-lock.json
 .*.sw[poq]
 /static/css
 .DS_Store
+static/bundle.js*

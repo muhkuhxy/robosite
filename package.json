@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "gulp css && webpack -p && hugo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,10 +29,17 @@
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
     "normalize.css": "^7.0.0",
+    "postcss": "^6.0.8",
     "postcss-color-function": "^4.0.0",
+    "postcss-discard-comments": "^2.0.4",
     "postcss-lh": "^1.1.4",
+    "postcss-loader": "^2.0.6",
     "precss": "^2.0.0",
     "stylelint": "^8.0.0",
-    "stylelint-config-recommended": "^1.0.0"
+    "stylelint-config-recommended": "^1.0.0",
+    "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "Base64": "^1.0.1"
   }
 }
