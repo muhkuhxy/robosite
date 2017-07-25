@@ -9,11 +9,3 @@
 @import 'components/*.css';
 /* @import 'trumps/*.css'; */
 
-footer li {
-  list-style-type: none;
-  display: inline-block;
-}
-
-footer li + li:before {
-  content: " | ";
-}

@@ -1,8 +1,4 @@
 
-h1, h2, h3 {
-  & + ul,
-  & + ol {
-    margin-top: 0;
-  }
+ul, ol {
+  margin: ,5lh 0;
 }
-
