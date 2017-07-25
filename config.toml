@@ -2,3 +2,7 @@ baseURL = "https://muhkuhxy.github.io/"
 languageCode = "de-de"
 publishDir = "docs"
 title = "TG Tronik"
+
+[params]
+  mail = "info@tgtronik.de"
+  phone = "+49 (0)241 123456"

@@ -6,7 +6,7 @@ $footer-color: $lightgray !default;
 
 .footer {
   background-color: $footer-bg;
-  margin-top: 1lh;
+  margin-top: 4lh;
   padding: 1lh 5rem;
   color: $footer-color;
   display: flex;
@@ -27,6 +27,7 @@ $footer-color: $lightgray !default;
 
   &__legal {
     align-self: flex-end;
+    text-align: right;
   }
 
 }

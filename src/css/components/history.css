@@ -1,0 +1,15 @@
+
+.history {
+  display: flex;
+  flex-flow: row wrap;
+  width: 75vw;
+  margin: 2lh auto 0;
+  justify-content: center;
+
+  &__chapter {
+    width: 25vw;
+    margin: 0 3lh;
+  }
+
+}
+

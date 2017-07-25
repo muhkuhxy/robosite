@@ -2,11 +2,10 @@
 .body-text {
   max-width: 40rem;
   margin: auto;
-  padding: 2lh 0;
+  padding: 2lh 0 0;
 
-  &--close {
+  & + & > .dual-headline {
     padding-top: 0;
-    padding-bottom: 2lh;
   }
 }
 

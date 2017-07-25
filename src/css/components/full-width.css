@@ -10,7 +10,7 @@ $hero-headline: $orange;
   flex-flow: row wrap;
   justify-content: center;
   padding: 2lh 0;
-  margin-top: 1lh;
+  margin-top: 4lh;
 
   &--stripe {
     background-color: $stripe-bg-color;

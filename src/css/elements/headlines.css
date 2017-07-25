@@ -7,17 +7,18 @@ h1,
 h2,
 h3 {
   font-family: $headline-font;
-  padding: 2lh 0 0.5lh 0;
   margin: 0;
   font-weight: normal;
 }
 
 h1 {
   @mixin ts 3;
+  padding: 2.5lh 0 0.5lh 0;
 }
 
 h2 {
   @mixin ts 2;
+  padding: 1.5lh 0 0.5lh 0;
   color: $headline-highlight;
 }
 
