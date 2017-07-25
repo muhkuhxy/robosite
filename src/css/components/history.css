@@ -6,6 +6,10 @@
   margin: 2lh auto 0;
   justify-content: center;
 
+  &__image {
+    margin: .5lh 0;
+  }
+
   &__chapter {
     width: 25vw;
     margin: 0 3lh;

@@ -4,9 +4,6 @@
   margin: auto;
   padding: 2lh 0 0;
 
-  & + & > .dual-headline {
-    padding-top: 0;
-  }
 }
 
 .body-text__paragraph {
