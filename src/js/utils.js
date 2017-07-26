@@ -1,4 +1,19 @@
 
+function $ (query, root) {
+  var context = root || document
+  return context.querySelector(query)
+}
+
+function $$ (query, root) {
+  var context = root || document
+  var result = context.querySelectorAll(query)
+  if ('forEach' in result) {
+    return result
+  } else {
+    return Array.prototype.slice.call(result)
+  }
+}
+
 function hide (element) {
   style(element, 'display', 'none')
 }
@@ -38,7 +53,7 @@ function queryAndDo (query, attr, action) {
     }
   }
   if (typeof query === 'string') {
-    document.querySelectorAll(query).forEach(andDo)
+    $$(query).forEach(andDo)
   } else if (query != null) {
     andDo(query)
   }
@@ -48,5 +63,7 @@ export {
   hide,
   show,
   disable,
-  enable
+  enable,
+  $,
+  $$
 }

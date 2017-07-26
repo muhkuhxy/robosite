@@ -1,4 +1,5 @@
 import base64 from 'base64'
+import { $$ } from './utils'
 
 function decode (text) {
   return base64.atob(text)
@@ -13,7 +14,7 @@ function decodeElement (element) {
 }
 
 function decodeAll () {
-  document.querySelectorAll('.obfuscated').forEach(decodeElement)
+  $$('.obfuscated').forEach(decodeElement)
 }
 
 export {

@@ -1,5 +1,5 @@
 import send from './formspree-client'
-import {hide, show, disable, enable} from './utils'
+import {$, $$, hide, show, disable, enable} from './utils'
 
 var technicalError = 'Leider konnte Ihre Nachricht nicht übermittelt werden. Bitte versuchen Sie es später erneut. Oder nutzen Sie eine der anderen Kontaktmöglichkeiten am Ende der Seite.'
 
@@ -13,7 +13,7 @@ function ok (button) {
 function fail (msg, button) {
   return function (error) {
     console.log(error)
-    var p = document.querySelector('.contactform__failure')
+    var p = $('.contactform__failure')
     p.innerText = msg
     show(p)
     enable(button)
@@ -34,7 +34,7 @@ function submit () {
   if (!validate(elements)) {
     failFast('Bitte geben Sie Ihren Namen und eine Nachricht ein.')
   } else {
-    var button = document.querySelector('.contactform__button')
+    var button = $('.contactform__button')
     disable(button)
     send(elements.address.value, {
       Name: elements.name.value,
@@ -48,7 +48,7 @@ function submit () {
 
 function bind () {
   show(document.forms.contact)
-  document.querySelectorAll('.contactform__button').forEach(function (button) {
+  $$('.contactform__button').forEach(function (button) {
     button.addEventListener('click', function (e) {
       e.preventDefault()
       submit()
