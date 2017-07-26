@@ -6,8 +6,8 @@ function decode (text) {
 }
 
 function decodeElement (element) {
-  const value = decode(element.innerText)
-  element.innerText = value
+  const value = decode(element.textContent)
+  element.textContent = value
   if (element.tagName.toLowerCase() === 'a') {
     element.href = 'mailto:' + value
   }

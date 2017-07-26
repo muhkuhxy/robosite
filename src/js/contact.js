@@ -15,7 +15,7 @@ function fail (msg, button) {
   return function (error) {
     console.log(error)
     var p = $('.contactform__failure')
-    p.innerText = msg
+    p.textContent = msg
     show(p)
     enable(button)
   }
