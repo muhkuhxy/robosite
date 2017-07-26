@@ -26,6 +26,6 @@ gulp.task('css', function () {
 })
 
 gulp.task('watch', ['css'], function () {
-  gulp.watch('./src/css/**/*.css', ['css'])
+  gulp.watch('src/css/**/*.css', ['css'])
     .on('error', gutil.log)
 })

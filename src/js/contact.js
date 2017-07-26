@@ -47,6 +47,7 @@ function submit () {
 }
 
 function bind () {
+  show(document.forms.contact)
   document.querySelectorAll('.contactform__button').forEach(function (button) {
     button.addEventListener('click', function (e) {
       e.preventDefault()

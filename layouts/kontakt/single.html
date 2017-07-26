@@ -5,11 +5,14 @@
     <div class="dual-headline__first">Schreiben Sie uns</div>
     <div class="dual-headline__second">Kontaktformular</div>
   </h1>
-  <p class="body-text__paragraph">Bitte denken Sie daran, uns mitzuteilen, wie wir Sie erreichen können. Wir werden uns so bald wie möglich bei Ihnen melden.</p>
+  <p class="body-text__paragraph js-only">Bitte denken Sie daran, uns mitzuteilen, wie wir Sie erreichen können. Wir werden uns so bald wie möglich bei Ihnen melden.</p>
 </section>
 
 <section class="body-text">
-  <form class="contactform" name="contact">
+  <noscript>
+    <p>Leider wird für das Kontaktformular JavaScript benötigt, was in Ihrem Browser anscheinend deaktiviert ist. Bitte aktivieren Sie JavaScript oder nutzen Sie eine der anderen Kontaktmöglichkeiten am Ende der Seite.</p>
+  </noscript>
+  <form class="contactform js-only" name="contact" action="#ignored">
     <label for="name">Ihr Name</label>
     <div>
       <input class="contactform__name" id="name" name="name" type="text">
