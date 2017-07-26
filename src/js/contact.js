@@ -1,5 +1,6 @@
 import send from './formspree-client'
-import {$, $$, hide, show, disable, enable} from './utils'
+import {$, $$, hide, show, disable, enable} from './dom-utils'
+import {production} from './utils'
 
 var technicalError = 'Leider konnte Ihre Nachricht nicht übermittelt werden. Bitte versuchen Sie es später erneut. Oder nutzen Sie eine der anderen Kontaktmöglichkeiten am Ende der Seite.'
 
@@ -40,7 +41,7 @@ function submit () {
       Name: elements.name.value,
       Nachricht: elements.msg.value,
       _subject: 'Neue Nachricht vom Kontaktformular'
-    })
+    }, production() ? undefined : { success: elements.name.value !== 'fehler' })
       .then(ok(button))
       .catch(fail(technicalError, button))
   }

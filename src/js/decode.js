@@ -1,5 +1,5 @@
 import base64 from 'base64'
-import { $$ } from './utils'
+import { $$ } from './dom-utils'
 
 function decode (text) {
   return base64.atob(text)

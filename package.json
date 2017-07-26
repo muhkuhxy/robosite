@@ -39,12 +39,12 @@
     "standard-loader": "^6.0.1",
     "stylelint": "^8.0.0",
     "stylelint-config-recommended": "^1.0.0",
-    "url-search-params": "^0.7.1",
     "webpack": "^3.3.0"
   },
   "dependencies": {
     "Base64": "^1.0.1",
     "axios": "^0.16.2",
-    "es6-promise": "^4.1.1"
+    "es6-promise": "^4.1.1",
+    "url-search-params-polyfill": "^2.0.0"
   }
 }

@@ -1,8 +1,7 @@
+/* eslint-env browser */
 
 import axios from 'axios'
 import {decode} from './decode'
-import {Promise} from 'es6-promise'
-import URLSearchParams from 'url-search-params'
 
 function urlify (data) {
   var urlEncoded = new URLSearchParams()
@@ -14,9 +13,7 @@ function urlify (data) {
 
 function sendTestMode (opts) {
   return new Promise(function (resolve, reject) {
-    'timeout' in opts || (
-      opts.timeout = 5000
-    )
+    'timeout' in opts || (opts.timeout = 5000)
     window.setTimeout(function () {
       if (opts.success) {
         resolve()
@@ -29,10 +26,11 @@ function sendTestMode (opts) {
 
 // testMode: { success: boolean, timeout: int (5000) }
 function send (address, data, testMode) {
+  var payload = urlify(data)
   if (testMode) {
+    console.log('sending payload "' + payload + '" to ' + decode(address))
     return sendTestMode(testMode)
   }
-  var payload = urlify(data)
   return axios.create({
     baseURL: 'https://formspree.io/',
     timeout: 10000,
