@@ -1,0 +1,13 @@
+button.disabled {
+  color: $lightgray;
+  border-color: $lightgray;
+
+  &:hover,
+  &:focus {
+    color: $lightgray;
+    border-color: $lightgray;
+    cursor: default;
+    background-color: initial;
+  }
+
+}

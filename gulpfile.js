@@ -4,7 +4,7 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   sourcemaps = require('gulp-sourcemaps')
 
-gulp.task('css', function() {
+gulp.task('css', function () {
   return gulp.src('src/css/*.css')
     .pipe(sourcemaps.init())
     .pipe(postcss([
@@ -14,18 +14,18 @@ gulp.task('css', function() {
       require('postcss-lh'),
       require('autoprefixer'),
       require('cssnano')({
-            preset: ['default', {
-                discardComments: {
-                    removeAll: true,
-                }
-            }],
+        preset: ['default', {
+          discardComments: {
+            removeAll: true
+          }
+        }],
         filterPlugins: false
       })
     ]))
     .pipe(gulp.dest('./static/css/'))
 })
 
-gulp.task('watch', ['css'], function() {
+gulp.task('watch', ['css'], function () {
   gulp.watch('./src/css/**/*.css', ['css'])
     .on('error', gutil.log)
 })

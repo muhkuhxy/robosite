@@ -12,4 +12,14 @@
   &__button {
     margin-top: 1lh;
   }
+
+  &__success {
+    display: none;
+  }
+
+  &__failure {
+    display: none;
+    color: color($orange hue(-15%));
+  }
+
 }

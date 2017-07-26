@@ -9,7 +9,7 @@
 </section>
 
 <section class="body-text">
-  <form class="contactform" method="post" action="#">
+  <form class="contactform" name="contact">
     <label for="name">Ihr Name</label>
     <div>
       <input class="contactform__name" id="name" name="name" type="text">
@@ -18,7 +18,10 @@
     <div>
       <textarea class="contactform__msg" id="msg" name="msg"></textarea>
     </div>
-    <button type="submit" class="contactform__button">Abschicken</button>
+    <input name="address" type="hidden" value="{{ "timon.loeffen@gmail.com" | base64Encode }}">
+    <p hidden class="contactform__success">Vielen Dank für Ihre Nachricht.</p>
+    <p hidden class="contactform__failure">Ups, da ist was schief gegangen.</p>
+    <button class="contactform__button">Abschicken</button>
   </form>
 </section>
 
