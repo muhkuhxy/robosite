@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/robosite/css/font-awesome.min.css">
     <link rel="icon" href="/robosite/images/logo.gif">
 </head>
-<body>
+<body class="no-js">
 <header class="header clearfix">
   <div class="header__navbar">
     <a href="/robosite/"><img class="header__logo" src="/robosite/images/logo.png" alt="TG Tronik Logo"></a>
@@ -37,11 +37,14 @@
     <div class="dual-headline__first">Schreiben Sie uns</div>
     <div class="dual-headline__second">Kontaktformular</div>
   </h1>
-  <p class="body-text__paragraph">Bitte denken Sie daran, uns mitzuteilen, wie wir Sie erreichen können. Wir werden uns so bald wie möglich bei Ihnen melden.</p>
+  <p class="body-text__paragraph js-only">Bitte denken Sie daran, uns mitzuteilen, wie wir Sie erreichen können. Wir werden uns so bald wie möglich bei Ihnen melden.</p>
 </section>
 
 <section class="body-text">
-  <form class="contactform" method="post" action="#">
+  <noscript>
+    <p>Leider wird für das Kontaktformular JavaScript benötigt, was in Ihrem Browser anscheinend deaktiviert ist. Bitte aktivieren Sie JavaScript oder nutzen Sie eine der anderen Kontaktmöglichkeiten am Ende der Seite.</p>
+  </noscript>
+  <form class="contactform js-only" name="contact" action="#ignored">
     <label for="name">Ihr Name</label>
     <div>
       <input class="contactform__name" id="name" name="name" type="text">
@@ -50,7 +53,10 @@
     <div>
       <textarea class="contactform__msg" id="msg" name="msg"></textarea>
     </div>
-    <button type="submit" class="contactform__button">Abschicken</button>
+    <input name="address" type="hidden" value="dGltb24ubG9lZmZlbkBnbWFpbC5jb20=">
+    <p hidden class="contactform__success">Vielen Dank für Ihre Nachricht.</p>
+    <p hidden class="contactform__failure">Ups, da ist was schief gegangen.</p>
+    <button class="contactform__button">Abschicken</button>
   </form>
 </section>
 
@@ -68,7 +74,7 @@
         </span>
         <a href="tel:&#43;49%e2%80%89%280%29241%e2%80%89123456">&#43;49 (0)241 123456</a>
       </div>
-      <div class="contact__info">
+      <div class="contact__info js-only">
         <span class="contact__icon contact__icon--mail">
           <i class="fa fa-envelope fa-lg"></i>
         </span>
