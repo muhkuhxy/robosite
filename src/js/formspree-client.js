@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 import {decode} from './decode'
-import 'es6-promise'
+import {Promise} from 'es6-promise'
 import URLSearchParams from 'url-search-params'
 
 function urlify (data) {
