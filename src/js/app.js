@@ -6,7 +6,7 @@ import { $ } from './dom-utils'
 document.body.classList.remove('no-js')
 
 var nav = $('.navbar__items')
-$('.navbar__burger').addEventListener('click', function() {
+$('.navbar__burger').addEventListener('click', function () {
   if (nav.classList.contains('closed')) {
     nav.classList.remove('closed')
   } else {
