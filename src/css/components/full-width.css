@@ -28,7 +28,7 @@ $hero-headline: $orange;
 
   &__headline {
     color: $hero-headline;
-    @mixin ts 2;
+    @mixin ts 3;
     padding: 0 0 1lh;
     text-align: center;
   }

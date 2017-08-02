@@ -59,14 +59,22 @@ $header-image-border: color($lightgray blackness(+9%));
 
   &__image {
     @mixin respimg;
-    background-image: url('../images/orangerroboarm.jpg');
-    background-position: 50% 13%;
-    background-size: cover;
-    /* background-attachment: fixed; */
+    background-image: url('../images/anlage.jpg');
+    background-position: 50% 37%;
 
     &--unternehmen {
-      background-image: url('../images/roboarm.jpg');
-      background-position: 50% 20%;
+      background-image: url('../images/team.jpg');
+      background-position: 50% 30%;
+    }
+
+    &--kontakt {
+      background-image: url('../images/hand.jpg');
+      background-position: 50% 40%;
+    }
+
+    &--kompetenzen {
+      background-image: url('../images/abb.jpg');
+      background-position: 50% 29%;
     }
 
   }
@@ -83,8 +91,8 @@ $header-image-border: color($lightgray blackness(+9%));
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: color(white a(70%));
-    border: 1px solid $header-border;
+    background-color: color(white a(80%));
+    border: 1px solid $header-image-border;
     padding: .25lh .5lh;
 
     .dual-headline {
