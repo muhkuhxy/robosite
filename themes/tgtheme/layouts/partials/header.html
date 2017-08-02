@@ -1,7 +1,7 @@
 <header class="header clearfix">
-  <div class="header__navbar">
-    <a href="{{ "/" | relURL }}"><img class="header__logo" src="{{ "/images/logo.png" | relURL }}" alt="TG Tronik Logo"></a>
-    <nav class="header__nav">
+  <div class="navbar">
+    <a href="{{ "/" | relURL }}"><img class="navbar__logo" src="{{ "/images/logo.png" | relURL }}" alt="TG Tronik Logo"></a>
+    <nav class="navbar__nav">
       <ul>
         <li><a class="{{ if .IsHome }}active{{ end }}" href="{{ "/" | relURL }}">Start</a></li>
         <li><a class="{{ if eq .Type "kompetenzen" }}active{{ end }}" href="{{ "/kompetenzen" | relURL }}">Kompetenzen</a></li>
