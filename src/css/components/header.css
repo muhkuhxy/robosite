@@ -44,8 +44,8 @@ $header-image-border: color($lightgray blackness(+9%));
 
   &__tagline {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 1.25rem;
+    left: 1.25rem;
     background-color: color(white a(80%));
     border: 1px solid $header-image-border;
     padding: .25lh .5lh;

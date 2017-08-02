@@ -2,12 +2,15 @@
   <div class="navbar">
     <a href="{{ "/" | relURL }}"><img class="navbar__logo" src="{{ "/images/logo.png" | relURL }}" alt="TG Tronik Logo"></a>
     <nav class="navbar__nav">
-      <ul>
-        <li><a class="{{ if .IsHome }}active{{ end }}" href="{{ "/" | relURL }}">Start</a></li>
-        <li><a class="{{ if eq .Type "kompetenzen" }}active{{ end }}" href="{{ "/kompetenzen" | relURL }}">Kompetenzen</a></li>
-        <li><a class="{{ if eq .Type "unternehmen" }}active{{ end }}" href="{{ "/unternehmen" | relURL }}">Unternehmen</a></li>
-        <li><a class="{{ if eq .Type "kontakt" }}active{{ end }}" href="{{ "/kontakt" | relURL }}">Kontakt</a></li>
-      </ul>
+      <div class="navbar__burger"><i class="fa fa-fw fa-bars"></i> Menü</div>
+      <div class="navbar__items closed">
+        <ul>
+          <li><a class="{{ if .IsHome }}active{{ end }}" href="{{ "/" | relURL }}">Start</a></li>
+          <li><a class="{{ if eq .Type "kompetenzen" }}active{{ end }}" href="{{ "/kompetenzen" | relURL }}">Kompetenzen</a></li>
+          <li><a class="{{ if eq .Type "unternehmen" }}active{{ end }}" href="{{ "/unternehmen" | relURL }}">Unternehmen</a></li>
+          <li><a class="{{ if eq .Type "kontakt" }}active{{ end }}" href="{{ "/kontakt" | relURL }}">Kontakt</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
   <div class="header__image-parent">

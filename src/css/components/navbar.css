@@ -7,6 +7,9 @@ $header-nav-link-hover: $lightgray !default;
   background-color: $header-bg;
   position: relative;
   padding: 0 5rem;
+  @media (width <= 1000px) {
+    padding: 0 1.25rem;
+  }
 
   &__logo {
     position: absolute;
@@ -16,24 +19,59 @@ $header-nav-link-hover: $lightgray !default;
     z-index: 1000;
   }
 
+  &__burger {
+    padding: 1lh 0.75rem;
+    display: none;
+    cursor: pointer;
+    @media (width <= 670px) {
+      display: inline-block;
+    }
+  }
+
+  &__items {
+    background-color: $header-nav-link-hover;
+    color: $header-nav-link;
+    transform: translateX(-1.25rem);
+    transition: all 0.7s ease-in-out;
+    z-index: 900;
+    @media (width <= 670px) {
+      position: absolute;
+      width: 100%;
+      padding-right: 1.25rem;
+      &.closed {
+        transition: all 0.7s ease-in-out;
+        transform: translateX(670px);
+      }
+    }
+  }
+
   &__nav {
     text-align: right;
+    @media (width <= 670px) {
+      /* text-align: center; */
+    }
     font-size: 1.25rem;
 
     ul {
+      display: inline-block;
       margin: 0;
       padding: 0;
     }
 
     li {
       list-style-type: none;
-      display: inline;
+      @media (width > 670px) {
+        display: inline;
+      }
     }
 
     li a {
       color: $header-nav-link;
       padding: 1lh 0.75rem;
       display: inline-block;
+      @media (width <= 670px) {
+        /* display: block; */
+      }
 
       &:hover,
       &:focus,
