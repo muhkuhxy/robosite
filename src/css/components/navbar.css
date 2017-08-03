@@ -6,8 +6,8 @@ $header-nav-link-hover: $lightgray !default;
 .navbar {
   background-color: $header-bg;
   position: relative;
-  padding: 0 1.25rem;
-  @media (width > 1000px) {
+  padding: 0 $header-gap;
+  @media (width > $bp1000) {
     padding: 0 5rem;
   }
 
@@ -19,6 +19,12 @@ $header-nav-link-hover: $lightgray !default;
     z-index: 1000;
   }
 
+  &__nav {
+    text-align: right;
+    z-index: 800;
+    font-size: 1.25rem;
+  }
+
   &__burger {
     padding: 1lh 0.75rem;
     cursor: pointer;
@@ -26,7 +32,7 @@ $header-nav-link-hover: $lightgray !default;
     position: relative;
     background-color: $header-nav-link-hover;
     color: $header-nav-link;
-    @media (width > 670px) {
+    @media (width > $bp670) {
       display: none;
     }
   }
@@ -38,7 +44,7 @@ $header-nav-link-hover: $lightgray !default;
     transform: translateY(0);
     transition: all 0.7s;
     z-index: 850;
-    @media (width <= 670px) {
+    @media (width <= $bp670) {
       position: absolute;
       width: 100%;
       padding-right: 1.25rem;
@@ -46,15 +52,6 @@ $header-nav-link-hover: $lightgray !default;
         transform: translateY(-100%);
       }
     }
-  }
-
-  &__nav {
-    text-align: right;
-    z-index: 800;
-    @media (width <= 670px) {
-      /* text-align: center; */
-    }
-    font-size: 1.25rem;
 
     ul {
       display: inline-block;
@@ -64,7 +61,7 @@ $header-nav-link-hover: $lightgray !default;
 
     li {
       list-style-type: none;
-      @media (width > 670px) {
+      @media (width > $bp670) {
         display: inline;
       }
     }
@@ -73,7 +70,7 @@ $header-nav-link-hover: $lightgray !default;
       color: $header-nav-link;
       padding: 1lh 0.75rem;
       display: inline-block;
-      @media (width <= 670px) {
+      @media (width <= $bp670) {
         display: block;
         padding: .5lh 0.75rem;
       }

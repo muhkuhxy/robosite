@@ -13,17 +13,17 @@
       </div>
     </nav>
   </div>
-  <div class="header__image-parent">
-    <span class="header__image {{ if not .IsHome }}header__image--{{ .Type }}{{ end }}" role="presentation">
-      <span class="header__image-helper {{ if not .IsHome }}header__image-helper--small{{ end }}"></span>
-    </span>
+  <div class="header__image{{ if not .IsHome }} header__image--small{{ end }}">
     {{ if .IsHome }}
-    <div class="header__tagline">
-      <h1 class="dual-headline">
-        <div class="dual-headline__first">Ein starker Arm</div>
-        <div class="dual-headline__second">braucht eine gute Steuerung</div>
-      </h1>
-    </div>
+      <img src="{{ "/images/start.jpg" | relURL }}" class="header__image--start" alt="Roboter verarbeiten Karosserien">
+      <div class="header__tagline">
+        <h1 class="dual-headline">
+          <div class="dual-headline__first">Ein starker Arm</div>
+          <div class="dual-headline__second">braucht eine gute Steuerung</div>
+        </h1>
+      </div>
+    {{ else }}
+      <img src="{{ replace "/images/%s.jpg" "%s" (string .Type) | relURL }}" class="header__image--{{ .Type }}">
     {{ end }}
   </div>
 </header>

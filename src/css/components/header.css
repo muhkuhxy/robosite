@@ -1,21 +1,26 @@
 
 /* theme */
 $header-image-border: color($lightgray blackness(+9%));
+$header-gap: 1.25rem;
 /* end theme */
 
 .header {
   width: 100%;
 
-  &__image-parent {
+  &__image {
     position: relative;
+    max-height: 60vh;
+    overflow: hidden;
     border-top: 1px solid $header-image-border;
     border-bottom: 1px solid $header-image-border;
-  }
+    /* background-image: url('../images/anlage.jpg'); */
+    /* background-position: 50% 37%; */
 
-  &__image {
-    @mixin respimg;
-    background-image: url('../images/anlage.jpg');
-    background-position: 50% 37%;
+    &--start {
+      width: 100%;
+      margin-top: -20%;
+      margin-bottom: -10px;
+    }
 
     &--unternehmen {
       background-image: url('../images/team.jpg');
@@ -32,26 +37,26 @@ $header-image-border: color($lightgray blackness(+9%));
       background-position: 50% 29%;
     }
 
-  }
-
-  &__image-helper {
-    @mixin inner-respimg 60vh;
-
     &--small {
-      padding-top: 25vh;
+      max-height: 25vh;
     }
   }
 
   &__tagline {
     position: absolute;
-    bottom: 1.25rem;
-    left: 1.25rem;
+    bottom: $header-gap;
+    left: $header-gap;
     background-color: color(white a(80%));
     border: 1px solid $header-image-border;
     padding: .25lh .5lh;
+    margin-right: $header-gap;
 
     .dual-headline {
       padding: 0;
+    }
+
+    @media (width <= $bp670) {
+      display: none;
     }
   }
 
