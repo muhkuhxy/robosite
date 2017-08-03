@@ -6,9 +6,9 @@ $header-nav-link-hover: $lightgray !default;
 .navbar {
   background-color: $header-bg;
   position: relative;
-  padding: 0 5rem;
-  @media (width <= 1000px) {
-    padding: 0 1.25rem;
+  padding: 0 1.25rem;
+  @media (width > 1000px) {
+    padding: 0 5rem;
   }
 
   &__logo {
@@ -21,32 +21,36 @@ $header-nav-link-hover: $lightgray !default;
 
   &__burger {
     padding: 1lh 0.75rem;
-    display: none;
     cursor: pointer;
-    @media (width <= 670px) {
-      display: inline-block;
+    z-index: 900;
+    position: relative;
+    background-color: $header-nav-link-hover;
+    color: $header-nav-link;
+    @media (width > 670px) {
+      display: none;
     }
   }
 
   &__items {
     background-color: $header-nav-link-hover;
     color: $header-nav-link;
-    transform: translateX(-1.25rem);
-    transition: all 0.7s ease-in-out;
-    z-index: 900;
+    right: 0;
+    transform: translateY(0);
+    transition: all 0.7s;
+    z-index: 850;
     @media (width <= 670px) {
       position: absolute;
       width: 100%;
       padding-right: 1.25rem;
       &.closed {
-        transition: all 0.7s ease-in-out;
-        transform: translateX(670px);
+        transform: translateY(-100%);
       }
     }
   }
 
   &__nav {
     text-align: right;
+    z-index: 800;
     @media (width <= 670px) {
       /* text-align: center; */
     }
@@ -70,7 +74,8 @@ $header-nav-link-hover: $lightgray !default;
       padding: 1lh 0.75rem;
       display: inline-block;
       @media (width <= 670px) {
-        /* display: block; */
+        display: block;
+        padding: .5lh 0.75rem;
       }
 
       &:hover,
