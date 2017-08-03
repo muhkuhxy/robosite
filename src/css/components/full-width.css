@@ -17,6 +17,10 @@ $hero-headline: $orange;
     color: $stripe-color;
   }
 
+  @media (width < $bp1000) {
+    flex-flow: column wrap;
+  }
+
 }
 
 .one-third {
@@ -26,18 +30,33 @@ $hero-headline: $orange;
   flex-flow: column nowrap;
   align-items: stretch;
 
+  @media (width < $bp1000) {
+    flex-flow: row wrap;
+    width: initial;
+
+    &__link {
+      flex: 1 0 100%;
+    }
+
+    & + & {
+      margin-top: 2lh;
+    }
+  }
+
   &__headline {
     color: $hero-headline;
     @mixin ts 3;
-    padding: 0 0 1lh;
-    text-align: center;
+    padding: 0 0 1lh 20%;
   }
 
   &__image {
     @mixin respimg;
+    @media (width < $bp1000) {
+      flex: 0 1 33%;
+    }
 
     &--tari {
-      background-image: url('../images/tari.png');
+      background-image: url('../images/team-teaser.jpg');
       background-position: top;
       background-size: 100% auto;
     }
@@ -61,16 +80,35 @@ $hero-headline: $orange;
 
   &__text {
     padding: .5lh 0;
+    @media (width < $bp1000) {
+      padding: 0;
+    }
   }
 
   &__spacer {
     flex: 1 0 auto;
     min-height: 1lh;
+    @media (width < $bp1000) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    flex: 1 1 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 0 2rem;
   }
 
   &__button {
     @mixin button $button-color;
     text-align: center;
+
+    @media (width < $bp1000) {
+      margin: 1lh 1rem 0;
+      align-self: center;
+    }
   }
 
 }

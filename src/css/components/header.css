@@ -1,7 +1,6 @@
 
 /* theme */
 $header-image-border: color($lightgray blackness(+9%));
-$header-gap: 1.25rem;
 /* end theme */
 
 .header {
@@ -19,6 +18,9 @@ $header-gap: 1.25rem;
     &--start {
       width: 100%;
       margin-top: -20%;
+      @media (width < $bp670) {
+        margin-top: -10%;
+      }
       margin-bottom: -10px;
     }
 
@@ -44,12 +46,12 @@ $header-gap: 1.25rem;
 
   &__tagline {
     position: absolute;
-    bottom: $header-gap;
-    left: $header-gap;
+    bottom: $content-gap;
+    left: $content-gap;
     background-color: color(white a(80%));
     border: 1px solid $header-image-border;
     padding: .25lh .5lh;
-    margin-right: $header-gap;
+    margin-right: $content-gap;
 
     .dual-headline {
       padding: 0;

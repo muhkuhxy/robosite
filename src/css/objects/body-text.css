@@ -3,6 +3,10 @@
   max-width: 40rem;
   margin: auto;
   padding: 2lh 0 0;
+  @media (width < 42.5rem) { /* width + 2*content gap */
+    margin: 0 $content-gap;
+    padding: 0;
+  }
 
 }
 

@@ -1,9 +1,11 @@
 <div class="one-third">
-  <a href="{{ .hero.link | relURL }}"><h2 class="one-third__headline">{{ .hero.headline }}</h2></a>
-  <span class="one-third__image one-third__image--{{ .hero.image }}" role="presentation">
-    <a href="{{ .hero.link | relURL }}" class="one-third__image-helper"></a>
-  </span>
+  <a class="one-third__link" href="{{ .hero.link | relURL }}"><h2 class="one-third__headline">{{ .hero.headline }}</h2></a>
+  <a href="{{ .hero.link | relURL }}" class="one-third__image">
+    <img src="{{ .hero.image | relURL }}">
+  </a>
+  <div class="one-third__wrapper">
   <div class="one-third__text">{{ .hero.text }}</div>
   <div class="one-third__spacer"></div>
   <a href="{{ .hero.link | relURL }}" class="one-third__button">{{ printf .hero.button .context.Site.Title }}</a>
+  </div>
 </div>

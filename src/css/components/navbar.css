@@ -6,7 +6,7 @@ $header-nav-link-hover: $lightgray !default;
 .navbar {
   background-color: $header-bg;
   position: relative;
-  padding: 0 $header-gap;
+  padding: 0 $content-gap;
   @media (width > $bp1000) {
     padding: 0 5rem;
   }
