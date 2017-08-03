@@ -1,21 +1,24 @@
 import { $ } from './dom-utils'
 
-var nav = $('.navbar__items')
+var showMenu = $('#show-menu')
 
-function toggleMenu (e) {
-  console.log('called')
-  if (nav.classList.contains('closed')) {
-    nav.classList.remove('closed')
-    document.body.addEventListener('click', toggleMenu)
-  } else {
-    nav.classList.add('closed')
-    document.body.removeEventListener('click', toggleMenu)
+function closeMenu () {
+  if (showMenu.checked) {
+    showMenu.checked = false
   }
-  e.stopPropagation()
 }
 
 function bind () {
-  $('.navbar__burger').addEventListener('click', toggleMenu)
+  showMenu.addEventListener('change', function (e) {
+    if (e.target.checked) {
+      document.body.addEventListener('click', closeMenu, { once: true })
+    } else {
+      document.body.removeEventListener('click', closeMenu)
+    }
+  })
+  $('.navbar__burger').addEventListener('click', function (e) {
+    e.stopPropagation() // prevent double toggle (click label -> change, bubble to body -> change again)
+  })
 }
 
 export {

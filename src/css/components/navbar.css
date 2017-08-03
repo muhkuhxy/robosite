@@ -31,25 +31,31 @@ $header-nav-link-hover: $lightgray !default;
     z-index: 900;
     position: relative;
     background-color: $header-nav-link-hover;
-    color: $header-nav-link;
+    display: block;
     @media (width > $bp670) {
       display: none;
     }
   }
 
+  #show-menu {
+    display: none;
+  }
+
   &__items {
     background-color: $header-nav-link-hover;
-    color: $header-nav-link;
-    right: 0;
-    transform: translateY(0);
-    transition: all 0.7s;
     z-index: 850;
+
     @media (width <= $bp670) {
       position: absolute;
       width: 100%;
+      right: 0;
       padding-right: 1.25rem;
-      &.closed {
-        transform: translateY(-100%);
+      transform: translateY(-100%);
+      #show-menu:checked + & {
+        transform: translateY(0);
+      }
+      .loaded & {
+        transition: transform 0.7s;
       }
     }
 

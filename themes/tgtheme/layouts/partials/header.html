@@ -2,8 +2,9 @@
   <div class="navbar">
     <a href="{{ "/" | relURL }}"><img class="navbar__logo" src="{{ "/images/logo.png" | relURL }}" alt="TG Tronik Logo"></a>
     <nav class="navbar__nav">
-      <div class="navbar__burger"><i class="fa fa-fw fa-bars"></i> Menü</div>
-      <div class="navbar__items closed">
+      <label class="navbar__burger" for="show-menu"><i class="fa fa-fw fa-bars"></i> Menü</label>
+      <input type="checkbox" id="show-menu">
+      <div class="navbar__items">
         <ul>
           <li><a class="{{ if .IsHome }}active{{ end }}" href="{{ "/" | relURL }}">Start</a></li>
           <li><a class="{{ if eq .Type "kompetenzen" }}active{{ end }}" href="{{ "/kompetenzen" | relURL }}">Kompetenzen</a></li>
@@ -22,7 +23,7 @@
           <div class="dual-headline__second">braucht eine gute Steuerung</div>
         </h1>
       </div>
-    {{ else }}
+    {{ else if not (eq .Type "impressum") }}
       <img src="{{ replace "/images/%s.jpg" "%s" (string .Type) | relURL }}" class="header__image--{{ .Type }}">
     {{ end }}
   </div>

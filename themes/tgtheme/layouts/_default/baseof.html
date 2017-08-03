@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ .Site.Title }} &ndash; {{ .Title }}</title>
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
     <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | relURL }}">
+    <title>{{ .Site.Title }} &ndash; {{ .Title }}</title>
     <link rel="icon" href="{{ "/images/logo.gif" | relURL }}">
 </head>
 <body class="no-js">
@@ -15,6 +15,7 @@
 {{ end }}
 
 {{ partial "footer" . }}
-<script src="{{ "/bundle.js" | relURL }}"></script>
+<script async src="{{ "/bundle.js" | relURL }}"></script>
+<script> </script>
 </body>
 </html>
