@@ -6,6 +6,9 @@
   @media (width < 42.5rem) { /* width + 2*content gap */
     margin: 0 $content-gap;
     padding: 0;
+    & + & {
+      padding: 2lh 0 0;
+    }
   }
 
 }

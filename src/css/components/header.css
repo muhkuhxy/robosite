@@ -12,11 +12,12 @@ $header-image-border: color($lightgray blackness(+9%));
     overflow: hidden;
     border-top: 1px solid $header-image-border;
     border-bottom: 1px solid $header-image-border;
-    /* background-image: url('../images/anlage.jpg'); */
-    /* background-position: 50% 37%; */
+
+    img {
+      width: 100%;
+    }
 
     &--start {
-      width: 100%;
       margin-top: -20%;
       @media (width < $bp670) {
         margin-top: -10%;
@@ -24,17 +25,32 @@ $header-image-border: color($lightgray blackness(+9%));
       margin-bottom: -10px;
     }
 
+    &--kompetenzen {
+      margin-top: -8%;
+      @media (width < $bp670) {
+        margin-top: -3%;
+      }
+      margin-bottom: -10px;
+    }
+
     &--unternehmen {
+      margin-top: -15%;
+      @media (width < $bp670) {
+        margin-top: -6%;
+      }
+      margin-bottom: -10px;
     }
 
     &--kontakt {
-    }
-
-    &--kompetenzen {
+      margin-top: -18%;
+      @media (width < $bp670) {
+        margin-top: -4%;
+      }
+      margin-bottom: -10px;
     }
 
     &--small {
-      max-height: 25vh;
+      max-height: 30vh;
     }
   }
 
