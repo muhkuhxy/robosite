@@ -23,8 +23,15 @@
           <div class="dual-headline__second">braucht eine gute Steuerung</div>
         </h1>
       </div>
-    {{ else if not (eq .Type "impressum") }}
-      <img src="{{ replace "/images/%s.jpg" "%s" (string .Type) | relURL }}" class="header__image--{{ .Type }}">
+    {{ end }}
+    {{ if eq .Type "kompetenzen" }}
+      <img src="{{ "/images/kompetenzen.jpg" | relURL }}" class="header__image--kompetenzen">
+    {{ end }}
+    {{ if eq .Type "unternehmen" }}
+      <img src="{{ "/images/unternehmen.jpg" | relURL }}" class="header__image--unternehmen">
+    {{ end }}
+    {{ if eq .Type "kontakt" }}
+      <img src="{{ "/images/kontakt.jpg" | relURL }}" class="header__image--kontakt">
     {{ end }}
   </div>
 </header>
