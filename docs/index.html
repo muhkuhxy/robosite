@@ -4,9 +4,9 @@
 	<meta name="generator" content="Hugo 0.25.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TG Tronik &ndash; Start</title>
     <link rel="stylesheet" href="/robosite/css/style.css">
     <link rel="stylesheet" href="/robosite/css/font-awesome.min.css">
+    <title>TG Tronik &ndash; Start</title>
     <link rel="icon" href="/robosite/images/logo.gif">
 </head>
 <body class="no-js">
@@ -14,8 +14,9 @@
   <div class="navbar">
     <a href="/robosite/"><img class="navbar__logo" src="/robosite/images/logo.png" alt="TG Tronik Logo"></a>
     <nav class="navbar__nav">
-      <div class="navbar__burger"><i class="fa fa-fw fa-bars"></i> Menü</div>
-      <div class="navbar__items closed">
+      <label class="navbar__burger" for="show-menu"><i class="fa fa-fw fa-bars"></i> Menü</label>
+      <input type="checkbox" id="show-menu">
+      <div class="navbar__items">
         <ul>
           <li><a class="active" href="/robosite/">Start</a></li>
           <li><a class="" href="/robosite/kompetenzen">Kompetenzen</a></li>
@@ -25,17 +26,18 @@
       </div>
     </nav>
   </div>
-  <div class="header__image-parent">
-    <span class="header__image " role="presentation">
-      <span class="header__image-helper "></span>
-    </span>
+  <div class="header__image">
     
-    <div class="header__tagline">
-      <h1 class="dual-headline">
-        <div class="dual-headline__first">Ein starker Arm</div>
-        <div class="dual-headline__second">braucht eine gute Steuerung</div>
-      </h1>
-    </div>
+      <img src="/robosite/images/start.jpg" class="header__image--start" alt="Roboter verarbeiten Karosserien">
+      <div class="header__tagline">
+        <h1 class="dual-headline">
+          <div class="dual-headline__first">Ein starker Arm</div>
+          <div class="dual-headline__second">braucht eine gute Steuerung</div>
+        </h1>
+      </div>
+    
+    
+    
     
   </div>
 </header>
@@ -54,35 +56,38 @@
 <section class="full-width full-width--stripe">
   
     <div class="one-third">
-  <a href="/robosite/unternehmen"><h2 class="one-third__headline">Unternehmen</h2></a>
-  <span class="one-third__image one-third__image--tari" role="presentation">
-    <a href="/robosite/unternehmen" class="one-third__image-helper"></a>
-  </span>
+  <a class="one-third__link" href="/robosite/unternehmen"><h2 class="one-third__headline">Unternehmen</h2></a>
+  <a href="/robosite/unternehmen" class="one-third__image">
+    <img src="/robosite/images/unternehmen_teaser.jpg">
+  </a>
+  <div class="one-third__wrapper">
   <div class="one-third__text">Hier können Sie mehr über uns erfahren. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque massa et hendrerit convallis.</div>
-  <div class="one-third__spacer"></div>
   <a href="/robosite/unternehmen" class="one-third__button">TG Tronik stellt sich vor</a>
+  </div>
 </div>
 
   
     <div class="one-third">
-  <a href="/robosite/kompetenzen"><h2 class="one-third__headline">Kompetenzen</h2></a>
-  <span class="one-third__image one-third__image--roboarm" role="presentation">
-    <a href="/robosite/kompetenzen" class="one-third__image-helper"></a>
-  </span>
+  <a class="one-third__link" href="/robosite/kompetenzen"><h2 class="one-third__headline">Kompetenzen</h2></a>
+  <a href="/robosite/kompetenzen" class="one-third__image">
+    <img src="/robosite/images/kompetenzen_teaser.jpg">
+  </a>
+  <div class="one-third__wrapper">
   <div class="one-third__text">Hier können Sie mehr über uns erfahren. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque massa et hendrerit convallis.</div>
-  <div class="one-third__spacer"></div>
   <a href="/robosite/kompetenzen" class="one-third__button">TG Tronik kann alles</a>
+  </div>
 </div>
 
   
     <div class="one-third">
-  <a href="/robosite/egal"><h2 class="one-third__headline">Noch ein Punkt</h2></a>
-  <span class="one-third__image one-third__image--robozelle" role="presentation">
-    <a href="/robosite/egal" class="one-third__image-helper"></a>
-  </span>
+  <a class="one-third__link" href="/robosite/kontakt"><h2 class="one-third__headline">Kontakt</h2></a>
+  <a href="/robosite/kontakt" class="one-third__image">
+    <img src="/robosite/images/kontakt_teaser.jpg">
+  </a>
+  <div class="one-third__wrapper">
   <div class="one-third__text">Hier können Sie mehr über uns erfahren. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque massa et hendrerit convallis.</div>
-  <div class="one-third__spacer"></div>
-  <a href="/robosite/egal" class="one-third__button">TG Tronik ist super</a>
+  <a href="/robosite/kontakt" class="one-third__button">TG Tronik ist super</a>
+  </div>
 </div>
 
   
@@ -101,7 +106,7 @@
   <a class="footer__logo-container" href="/robosite/">
     <img class="footer__logo" src="/robosite/images/logo.png" alt="TG Tronik Logo">
   </a>
-  <div class="contact footer--contact">
+  <div class="contact footer__contact">
       <h2 class="contact__headline">Kontaktieren Sie uns</h2>
       <div class="contact__info">
         <span class="contact__icon">
@@ -118,12 +123,13 @@
       <div class="contact__form">Oder über das <a href="/robosite/kontakt">Kontaktformular</a></div>
   </div>
   <div class="footer__legal">
-    <div><a href="/robosite/impressum">Impressum</a></div>
-    <div><a href="/robosite/impressum#datenschutz">Datenschutz</a></div>
+    <div class="footer__legal-link"><a href="/robosite/impressum">Impressum</a></div>
+    <div class="footer__legal-link"><a href="/robosite/impressum#datenschutz">Datenschutz</a></div>
     <div>&copy; 2017 TG Tronik</div>
   </div>
 </footer>
 
-<script src="/robosite/bundle.js"></script>
+<script async src="/robosite/bundle.js"></script>
+<script> </script>
 </body>
 </html>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TG Tronik &ndash; Impressum</title>
     <link rel="stylesheet" href="/robosite/css/style.css">
     <link rel="stylesheet" href="/robosite/css/font-awesome.min.css">
+    <title>TG Tronik &ndash; Impressum</title>
     <link rel="icon" href="/robosite/images/logo.gif">
 </head>
 <body class="no-js">
@@ -13,8 +13,9 @@
   <div class="navbar">
     <a href="/robosite/"><img class="navbar__logo" src="/robosite/images/logo.png" alt="TG Tronik Logo"></a>
     <nav class="navbar__nav">
-      <div class="navbar__burger"><i class="fa fa-fw fa-bars"></i> Menü</div>
-      <div class="navbar__items closed">
+      <label class="navbar__burger" for="show-menu"><i class="fa fa-fw fa-bars"></i> Menü</label>
+      <input type="checkbox" id="show-menu">
+      <div class="navbar__items">
         <ul>
           <li><a class="" href="/robosite/">Start</a></li>
           <li><a class="" href="/robosite/kompetenzen">Kompetenzen</a></li>
@@ -24,10 +25,10 @@
       </div>
     </nav>
   </div>
-  <div class="header__image-parent">
-    <span class="header__image header__image--impressum" role="presentation">
-      <span class="header__image-helper header__image-helper--small"></span>
-    </span>
+  <div class="header__image header__image--small">
+    
+    
+    
     
   </div>
 </header>
@@ -95,7 +96,7 @@
   <a class="footer__logo-container" href="/robosite/">
     <img class="footer__logo" src="/robosite/images/logo.png" alt="TG Tronik Logo">
   </a>
-  <div class="contact footer--contact">
+  <div class="contact footer__contact">
       <h2 class="contact__headline">Kontaktieren Sie uns</h2>
       <div class="contact__info">
         <span class="contact__icon">
@@ -112,12 +113,13 @@
       <div class="contact__form">Oder über das <a href="/robosite/kontakt">Kontaktformular</a></div>
   </div>
   <div class="footer__legal">
-    <div><a href="/robosite/impressum">Impressum</a></div>
-    <div><a href="/robosite/impressum#datenschutz">Datenschutz</a></div>
+    <div class="footer__legal-link"><a href="/robosite/impressum">Impressum</a></div>
+    <div class="footer__legal-link"><a href="/robosite/impressum#datenschutz">Datenschutz</a></div>
     <div>&copy; 2017 TG Tronik</div>
   </div>
 </footer>
 
-<script src="/robosite/bundle.js"></script>
+<script async src="/robosite/bundle.js"></script>
+<script> </script>
 </body>
 </html>
