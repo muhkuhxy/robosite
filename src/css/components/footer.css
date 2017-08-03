@@ -7,7 +7,11 @@ $footer-color: $lightgray !default;
 .footer {
   background-color: $footer-bg;
   margin-top: 4lh;
-  padding: 1lh 5rem;
+  padding: 1lh $content-gap;
+  @media (width > $bp1000) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
   color: $footer-color;
   display: flex;
   flex-flow: row nowrap;

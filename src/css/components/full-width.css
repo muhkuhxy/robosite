@@ -10,6 +10,10 @@ $hero-headline: $orange;
   flex-flow: row wrap;
   justify-content: center;
   padding: 2lh 0;
+  @media (width < 42.5rem) {
+    padding-left: $content-gap;
+    padding-right: $content-gap;
+  }
   margin-top: 4lh;
 
   &--stripe {
@@ -25,13 +29,18 @@ $hero-headline: $orange;
 
 .one-third {
   width: 25%;
-  margin: 0 2.5%;
+  @media (width >= 42.5rem) {
+    margin: 0 2.5%;
+  }
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
 
   @media (width < $bp1000) {
-    flex-flow: row wrap;
+    @media (width >= $bp500) {
+      flex-flow: row wrap;
+    }
+
     width: initial;
 
     &__link {
@@ -39,57 +48,37 @@ $hero-headline: $orange;
     }
 
     & + & {
-      margin-top: 2lh;
+      margin-top: 3lh;
     }
   }
 
   &__headline {
     color: $hero-headline;
     @mixin ts 3;
-    padding: 0 0 1lh 20%;
+    padding: 0 0 1lh;
+    text-align: center;
+    @media (width < $bp1000) {
+      /* padding-left: 46%; */
+      /* padding-left: calc(45% + 2rem); */
+      text-align: initial;
+    }
   }
 
   &__image {
-    @mixin respimg;
-    @media (width < $bp1000) {
-      flex: 0 1 33%;
+    @media ($bp500 < width < $bp1000) {
+      width: 45%;
+      order: 2;
     }
-
-    &--tari {
-      background-image: url('../images/team-teaser.jpg');
-      background-position: top;
-      background-size: 100% auto;
+    @media (width < $bp500) {
+      width: 85%;
+      margin: 0 auto;
     }
-
-    &--roboarm {
-      background-image: url('../images/roboarm.jpg');
-      background-position: -50px;
-      background-size: auto 140%;
-    }
-
-    &--robozelle {
-      background-image: url('../images/robozelle.jpg');
-      background-position: 33% 10%;
-      background-size: 105%;
-    }
-  }
-
-  &__image-helper {
-    @mixin inner-respimg 88%;
   }
 
   &__text {
     padding: .5lh 0;
-    @media (width < $bp1000) {
+    @media ($bp500 < width < $bp1000) {
       padding: 0;
-    }
-  }
-
-  &__spacer {
-    flex: 1 0 auto;
-    min-height: 1lh;
-    @media (width < $bp1000) {
-      display: none;
     }
   }
 
@@ -98,16 +87,18 @@ $hero-headline: $orange;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    padding: 0 2rem;
+    @media ($bp500 < width < $bp1000) {
+      padding-right: 2rem;
+    }
   }
 
   &__button {
     @mixin button $button-color;
     text-align: center;
+    margin-top: 1lh;
 
-    @media (width < $bp1000) {
-      margin: 1lh 1rem 0;
-      align-self: center;
+    @media (width < $bp1000) and (width > 500px) {
+      /* font-size: 1.25rem; */
     }
   }
 
