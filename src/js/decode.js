@@ -1,4 +1,4 @@
-import base64 from 'base64'
+import base64 from 'Base64'
 import { $$ } from './dom-utils'
 
 function decode (text) {
