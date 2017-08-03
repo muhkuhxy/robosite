@@ -14,8 +14,19 @@ $footer-color: $lightgray !default;
   }
   color: $footer-color;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
+  @media (width < $bp670) {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__contact {
+    @media (width < $bp670) {
+      order: -1;
+      text-align: center;
+    }
+  }
 
   &__logo-container {
     box-shadow: 3px 3px 11px 0px rgba(0, 0, 0, .5);
@@ -23,6 +34,9 @@ $footer-color: $lightgray !default;
     flex-direction: column;
     justify-content: center;
     background-color: white;
+    @media (width < $bp670) {
+      margin: 2lh;
+    }
   }
 
   &__logo {
@@ -32,6 +46,19 @@ $footer-color: $lightgray !default;
   &__legal {
     align-self: flex-end;
     text-align: right;
+
+    @media (width < $bp670) {
+      text-align: center;
+      align-self: initial;
+      &-link {
+        display: inline-block;
+        & + & {
+          &:before {
+            content: "| ";
+          }
+        }
+      }
+    }
   }
 
 }
