@@ -6,12 +6,15 @@ function closeMenu () {
   if (showMenu.checked) {
     showMenu.checked = false
   }
+  document.body.removeEventListener('click', closeMenu)
 }
 
 function bind () {
   showMenu.addEventListener('change', function (e) {
     if (e.target.checked) {
-      document.body.addEventListener('click', closeMenu, { once: true })
+      window.setTimeout(function () {
+        document.body.addEventListener('click', closeMenu)
+      })
     } else {
       document.body.removeEventListener('click', closeMenu)
     }
