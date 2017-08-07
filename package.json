@@ -45,6 +45,7 @@
     "Base64": "^1.0.1",
     "axios": "^0.16.2",
     "es6-promise": "^4.1.1",
+    "picturefill": "^3.0.2",
     "url-search-params-polyfill": "^2.0.0"
   }
 }
