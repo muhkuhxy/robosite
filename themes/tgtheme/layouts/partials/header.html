@@ -14,9 +14,13 @@
       </div>
     </nav>
   </div>
-  <div class="header__image{{ if not .IsHome }} header__image--small{{ end }}">
+  <div class="header__image">
     {{ if .IsHome }}
-      <img src="{{ "/images/start.jpg" | relURL }}" class="header__image--start" alt="Roboter verarbeiten Karosserien">
+      <img src="{{ "/images/start.jpg" | relURL }}"
+        srcset="{{ "/images/start500w.jpg" | relURL }} 500w,
+          {{ "/images/start1000w.jpg" | relURL }} 1000w,
+          {{ "/images/start.jpg" | relURL }}"
+        alt="Roboter verarbeiten Karosserien">
       <div class="header__tagline">
         <h1 class="dual-headline">
           <div class="dual-headline__first">Ein starker Arm</div>
@@ -25,13 +29,23 @@
       </div>
     {{ end }}
     {{ if eq .Type "kompetenzen" }}
-      <img src="{{ "/images/kompetenzen.jpg" | relURL }}" class="header__image--kompetenzen">
+      <img src="{{ "/images/kompetenzen.jpg" | relURL }}"
+        srcset="{{ "/images/kompetenzen500w.jpg" | relURL }} 500w,
+          {{ "/images/kompetenzen1000w.jpg" | relURL }} 1000w,
+          {{ "/images/kompetenzen.jpg" | relURL }}">
+      </picture>
     {{ end }}
     {{ if eq .Type "unternehmen" }}
-      <img src="{{ "/images/unternehmen.jpg" | relURL }}" class="header__image--unternehmen">
+      <img src="{{ "/images/unternehmen.jpg" | relURL }}"
+        srcset="{{ "/images/unternehmen500w.jpg" | relURL }} 500w,
+          {{ "/images/unternehmen1000w.jpg" | relURL }} 1000w,
+          {{ "/images/unternehmen.jpg" | relURL }}">
     {{ end }}
     {{ if eq .Type "kontakt" }}
-      <img src="{{ "/images/kontakt.jpg" | relURL }}" class="header__image--kontakt">
+      <img src="{{ "/images/kontakt.jpg" | relURL }}"
+        srcset="{{ "/images/kontakt500w.jpg" | relURL }} 500w,
+          {{ "/images/kontakt1000w.jpg" | relURL }} 1000w,
+          {{ "/images/kontakt.jpg" | relURL }}">
     {{ end }}
   </div>
 </header>

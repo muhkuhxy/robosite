@@ -57,7 +57,7 @@ $hero-headline: $orange;
   &__image {
     line-height: 0;
 
-    @media ($bp500 < width < $bp1000) {
+    @media ($bp500 <= width < $bp1000) {
       width: 45%;
       order: 2;
     }
@@ -69,7 +69,7 @@ $hero-headline: $orange;
 
   &__text {
     padding: .5lh 0;
-    @media ($bp500 < width < $bp1000) {
+    @media ($bp500 <= width < $bp1000) {
       padding: 0;
     }
   }
@@ -79,7 +79,7 @@ $hero-headline: $orange;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    @media ($bp500 < width < $bp1000) {
+    @media ($bp500 <= width < $bp1000) {
       padding-right: 2rem;
     }
   }
@@ -89,8 +89,8 @@ $hero-headline: $orange;
     text-align: center;
     margin-top: 1lh;
 
-    @media (width < $bp1000) and (width > 500px) {
-      /* font-size: 1.25rem; */
+    @media (width < $bp500) {
+      margin-top: 0;
     }
   }
 

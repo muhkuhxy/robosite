@@ -8,50 +8,15 @@ $header-image-border: color($lightgray blackness(+9%));
 
   &__image {
     position: relative;
-    max-height: 60vh;
     overflow: hidden;
     border-top: 1px solid $header-image-border;
     border-bottom: 1px solid $header-image-border;
+    line-height: 0;
 
     img {
       width: 100%;
     }
 
-    &--start {
-      margin-top: -20%;
-      @media (width < $bp670) {
-        margin-top: -10%;
-      }
-      margin-bottom: -10px;
-    }
-
-    &--kompetenzen {
-      margin-top: -8%;
-      @media (width < $bp670) {
-        margin-top: -3%;
-      }
-      margin-bottom: -10px;
-    }
-
-    &--unternehmen {
-      margin-top: -15%;
-      @media (width < $bp670) {
-        margin-top: -6%;
-      }
-      margin-bottom: -10px;
-    }
-
-    &--kontakt {
-      margin-top: -18%;
-      @media (width < $bp670) {
-        margin-top: -4%;
-      }
-      margin-bottom: -10px;
-    }
-
-    &--small {
-      max-height: 30vh;
-    }
   }
 
   &__tagline {
@@ -67,7 +32,7 @@ $header-image-border: color($lightgray blackness(+9%));
       padding: 0;
     }
 
-    @media (width <= $bp670) {
+    @media (width < $bp670) {
       display: none;
     }
   }
