@@ -16,10 +16,11 @@
   </div>
   <div class="header__image">
     {{ if .IsHome }}
-      <img srcset="{{ "/images/start500w.jpg" | relURL }} 500w,
-          {{ "/images/start1000w.jpg" | relURL }} 1000w,
-          {{ "/images/start.jpg" | relURL }}"
-        alt="Roboter verarbeiten Karosserien">
+      <picture>
+        <source srcset="{{ "/images/start500w.jpg" | relURL }}" media="(max-width: 500px)">
+        <source srcset="{{ "/images/start1000w.jpg" | relURL }}" media="(max-width: 1000px)">
+        <img srcset="{{ "/images/start@2x.jpg" | relURL }} 2x, {{ "/images/start.jpg" | relURL }}" alt="Roboter verarbeiten Karosserien">
+      </picture>
       <div class="header__tagline">
         <h1 class="dual-headline">
           <div class="dual-headline__first">Ein starker Arm</div>
@@ -28,20 +29,25 @@
       </div>
     {{ end }}
     {{ if eq .Type "kompetenzen" }}
-      <img srcset="{{ "/images/kompetenzen500w.jpg" | relURL }} 500w,
-          {{ "/images/kompetenzen1000w.jpg" | relURL }} 1000w,
-          {{ "/images/kompetenzen.jpg" | relURL }}">
+      <picture>
+        <source srcset="{{ "/images/kompetenzen500w.jpg" | relURL }}" media="(max-width: 500px)">
+        <source srcset="{{ "/images/kompetenzen1000w.jpg" | relURL }}" media="(max-width: 1000px)">
+        <img srcset="{{ "/images/kompetenzen@2x.jpg" | relURL }} 2x, {{ "/images/kompetenzen.jpg" | relURL }}">
       </picture>
     {{ end }}
     {{ if eq .Type "unternehmen" }}
-      <img srcset="{{ "/images/unternehmen500w.jpg" | relURL }} 500w,
-          {{ "/images/unternehmen1000w.jpg" | relURL }} 1000w,
-          {{ "/images/unternehmen.jpg" | relURL }}">
+      <picture>
+        <source srcset="{{ "/images/unternehmen500w.jpg" | relURL }}" media="(max-width: 500px)">
+        <source srcset="{{ "/images/unternehmen1000w.jpg" | relURL }}" media="(max-width: 1000px)">
+        <img srcset="{{ "/images/unternehmen@2x.jpg" | relURL }} 2x, {{ "/images/unternehmen.jpg" | relURL }}">
+      </picture>
     {{ end }}
     {{ if eq .Type "kontakt" }}
-      <img srcset="{{ "/images/kontakt500w.jpg" | relURL }} 500w,
-          {{ "/images/kontakt1000w.jpg" | relURL }} 1000w,
-          {{ "/images/kontakt.jpg" | relURL }}">
+      <picture>
+        <source srcset="{{ "/images/kontakt500w.jpg" | relURL }}" media="(max-width: 500px)">
+        <source srcset="{{ "/images/kontakt1000w.jpg" | relURL }}" media="(max-width: 1000px)">
+        <img srcset="{{ "/images/kontakt@2x.jpg" | relURL }} 2x, {{ "/images/kontakt.jpg" | relURL }}">
+      </picture>
     {{ end }}
   </div>
 </header>

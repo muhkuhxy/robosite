@@ -57,6 +57,9 @@ $header-nav-link-hover: $lightgray !default;
       .loaded & {
         transition: transform 0.7s;
       }
+      li {
+        margin: .25lh 0;
+      }
     }
 
     ul {
