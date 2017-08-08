@@ -2,7 +2,9 @@
 .imprint {
   margin: 0 auto;
   max-width: 40rem;
+
   @media (width <= 42.5rem) {
     padding: 0 $content-gap;
+    margin: 0;
   }
 }
