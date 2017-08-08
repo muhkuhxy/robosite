@@ -6,45 +6,49 @@ $hero-headline: $orange;
 /* end theme */
 
 .full-width {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  margin-top: 4lh;
   padding: 2lh 0;
-  @media (width < 42.5rem) {
+  @media (width < $bp1000) {
     padding-left: $content-gap;
     padding-right: $content-gap;
   }
-  margin-top: 4lh;
 
   &--stripe {
     background-color: $stripe-bg-color;
     color: $stripe-color;
   }
 
-  @media (width < $bp1000) {
-    flex-flow: column wrap;
+  @media (width >= $bp1000) {
+    display: flex;
+    flex-flow: row nowrap;
   }
 
 }
 
 .one-third {
-  width: 26%;
-  @media (width >= 42.5rem) {
-    margin: 0 2.5%;
-  }
   display: flex;
   flex-flow: row wrap;
 
-  @media (width < $bp1000) {
-    width: initial;
+  @media (width >= $bp1000) {
+    width: 26%;
+    margin-left: calc((100% - @width * 3) / 4);
+    flex-flow: column nowrap;
+  }
 
+  @media (width < $bp1000) {
     & + & {
       margin-top: 3lh;
+    }
+
+    @media (width >= $bp500) {
+      justify-content: space-between;
     }
   }
 
   &__link {
-    flex: 1 0 100%;
+    flex: 0 0 auto;
+    display: block;
+    width: 100%;
   }
 
   &__headline {
@@ -55,15 +59,14 @@ $hero-headline: $orange;
   }
 
   &__image {
+    flex: 0 0 auto;
     line-height: 0;
+    display: block;
+    width: 100%;
 
     @media ($bp500 <= width < $bp1000) {
       width: 45%;
       order: 2;
-    }
-    @media (width < $bp500) {
-      width: 85%;
-      margin: 0 auto;
     }
   }
 
@@ -75,17 +78,22 @@ $hero-headline: $orange;
   }
 
   &__wrapper {
-    flex: 1 1 50%;
+    flex: 1 0 auto;
+    width: 100%;
+
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+
     @media ($bp500 <= width < $bp1000) {
       padding-right: 2rem;
+      width: 54%;
     }
   }
 
   &__button {
     @mixin button $button-color;
+    display: block;
     text-align: center;
     margin-top: 1lh;
 
